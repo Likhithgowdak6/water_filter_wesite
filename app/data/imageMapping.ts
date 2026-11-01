@@ -6,7 +6,10 @@
 // categorized by visual content. Paths reference
 // the /public/images/ directory.
 
-export const IMAGES = {
+// Base path for GitHub Pages subfolder deployment
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/water_filter_wesite' : '';
+
+const rawImages = {
 
   // -----------------------------------------------
   // HERO SECTION
@@ -174,6 +177,22 @@ export const IMAGES = {
   },
 
 } as const;
+
+function withBasePath<T>(obj: T): T {
+  if (typeof obj === 'string') {
+    return (obj.startsWith('/') ? `${BASE_PATH}${obj}` : obj) as unknown as T;
+  }
+  if (typeof obj === 'object' && obj !== null) {
+    const res: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(obj)) {
+      res[k] = withBasePath(v);
+    }
+    return res as unknown as T;
+  }
+  return obj;
+}
+
+export const IMAGES = withBasePath(rawImages);
 
 // Product configuration — editable central data
 export const PRODUCT = {
