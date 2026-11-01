@@ -1,12 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  basePath: isProd ? "/water_filter_wesite" : "",
   images: {
-    // Allow all quality values so the warnings disappear
-    qualities: [70, 75, 80, 85, 90],
-    // Use unoptimized for local images with spaces in filenames
     unoptimized: true,
   },
 };
