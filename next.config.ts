@@ -1,16 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
+  images: {
+    // Allow all quality values so the warnings disappear
+    qualities: [70, 75, 80, 85, 90],
+    // Use unoptimized for local images with spaces in filenames
+    unoptimized: true,
   },
 };
 
