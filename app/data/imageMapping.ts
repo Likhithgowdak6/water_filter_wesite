@@ -180,7 +180,7 @@ const rawImages = {
 
 function withBasePath<T>(obj: T): T {
   if (typeof obj === 'string') {
-    return (obj.startsWith('/') ? `${BASE_PATH}${obj}` : obj) as unknown as T;
+    return (obj.startsWith('/') ? encodeURI(`${BASE_PATH}${obj}`) : obj) as unknown as T;
   }
   if (typeof obj === 'object' && obj !== null) {
     const res: Record<string, unknown> = {};
