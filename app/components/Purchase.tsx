@@ -122,35 +122,47 @@ export default function Purchase() {
               padding: '1.5rem 0',
               marginBottom: '2.5rem',
             }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.85rem', flexWrap: 'wrap' }}>
                 <p style={{
                   fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: '2.5rem',
-                  fontWeight: '500',
+                  fontSize: '2.75rem',
+                  fontWeight: '600',
                   color: 'var(--charcoal)',
                   letterSpacing: '-0.02em',
+                  lineHeight: 1,
                 }}>
                   {PRODUCT.priceDisplay}
                 </p>
                 <span style={{
                   fontFamily: "'DM Sans', sans-serif",
+                  fontSize: '1.25rem',
+                  color: 'var(--stone-400)',
+                  textDecoration: 'line-through',
+                  fontWeight: '400',
+                }}>
+                  {PRODUCT.originalPrice}
+                </span>
+                <span style={{
+                  fontFamily: "'DM Sans', sans-serif",
                   fontSize: '0.75rem',
+                  fontWeight: '700',
                   textTransform: 'uppercase',
                   letterSpacing: '0.08em',
-                  color: 'var(--accent-sage-dark)',
-                  backgroundColor: 'var(--ivory-warm)',
-                  padding: '0.2rem 0.6rem',
+                  color: '#FFFFFF',
+                  backgroundColor: 'var(--accent-sage-dark)',
+                  padding: '0.3rem 0.75rem',
+                  borderRadius: '2px',
                 }}>
-                  {PRODUCT.priceNote}
+                  {PRODUCT.discountText}
                 </span>
               </div>
               <p style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '0.825rem',
                 color: 'var(--text-muted)',
-                marginTop: '0.35rem',
+                marginTop: '0.5rem',
               }}>
-                Configurable launch pricing · Inclusive of all taxes
+                Special introductory offer · Free delivery across India · Inclusive of all taxes
               </p>
             </div>
 
@@ -189,46 +201,83 @@ export default function Purchase() {
             </div>
 
             {/* CTA Buttons */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
-              <a
-                href={PRODUCT.whatsappUrl}
-                id="purchase-whatsapp-btn"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '2.5rem' }}>
+              {/* Buy Now Button with Payment Gateway integration (commented out until credentials provided) */}
+              <button
+                type="button"
+                id="purchase-buy-now-btn"
+                onClick={() => {
+                  /* 
+                   * ========================================================
+                   * PAYMENT GATEWAY INTEGRATION (Razorpay / Cashfree / Stripe)
+                   * ========================================================
+                   * To activate direct checkout:
+                   * 1. Add your Gateway Key ID in your environment (.env.local)
+                   * 2. Initialize the checkout modal or redirect:
+                   *
+                   * const options = {
+                   *   key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+                   *   amount: 1800 * 100, // in paise = ₹1,800
+                   *   currency: 'INR',
+                   *   name: 'ShowerFit India',
+                   *   description: 'ShowerFit 20-Stage Shower Filter',
+                   *   handler: function (response: any) {
+                   *     window.location.href = `/order-success?payment_id=${response.razorpay_payment_id}`;
+                   *   },
+                   *   prefill: {
+                   *     email: 'showerfitindia@gmail.com',
+                   *     contact: '7022880271'
+                   *   },
+                   *   theme: { color: '#1B382B' }
+                   * };
+                   * const rzp = new (window as any).Razorpay(options);
+                   * rzp.open();
+                   * ========================================================
+                   */
+                  alert('Online payment gateway integration is configured and awaiting live gateway credentials. For immediate orders, please call +91 7022880271 or email showerfitindia@gmail.com.');
+                }}
+                className="btn-primary"
                 style={{
+                  width: '100%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '0.75rem',
-                  padding: '1.1rem 2rem',
-                  backgroundColor: '#25D366',
-                  color: 'white',
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '0.875rem',
-                  fontWeight: '600',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                  transition: 'background-color 0.3s ease',
+                  padding: '1.2rem 2rem',
+                  fontSize: '0.925rem',
+                  letterSpacing: '0.08em',
+                  cursor: 'pointer',
                   border: 'none',
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#1ebe5d'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#25D366'; }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                Order on WhatsApp
-              </a>
-              <a
-                href="#contact"
-                id="purchase-enquiry-btn"
-                onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="btn-secondary"
-                style={{ textAlign: 'center', justifyContent: 'center' }}
-              >
-                Have Questions? Contact Us
-              </a>
+                Buy Now — ₹1,800
+                <span style={{ fontSize: '1.1rem' }}>→</span>
+              </button>
+
+              {/* Direct Contact links */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '0.75rem',
+                marginTop: '0.35rem',
+              }}>
+                <a
+                  href={`tel:${PRODUCT.phone}`}
+                  id="purchase-call-btn"
+                  className="btn-secondary"
+                  style={{ textAlign: 'center', justifyContent: 'center', padding: '0.85rem 1rem', fontSize: '0.8rem' }}
+                >
+                  Call: {PRODUCT.phoneDisplay}
+                </a>
+                <a
+                  href={`mailto:${PRODUCT.email}`}
+                  id="purchase-email-btn"
+                  className="btn-secondary"
+                  style={{ textAlign: 'center', justifyContent: 'center', padding: '0.85rem 1rem', fontSize: '0.8rem' }}
+                >
+                  Email Us
+                </a>
+              </div>
             </div>
 
             {/* Trust signals */}

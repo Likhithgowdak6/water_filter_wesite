@@ -85,13 +85,13 @@ export default function Hero() {
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(to right, rgba(8,7,6,0.92) 0%, rgba(8,7,6,0.65) 50%, rgba(8,7,6,0.25) 100%)',
+        background: 'linear-gradient(to right, rgba(8,7,6,0.85) 0%, rgba(8,7,6,0.5) 55%, rgba(8,7,6,0.2) 100%)',
         zIndex: 2,
       }} />
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(to top, rgba(8,7,6,0.8) 0%, rgba(8,7,6,0) 60%)',
+        background: 'linear-gradient(to top, rgba(8,7,6,0.7) 0%, rgba(8,7,6,0) 50%)',
         zIndex: 2,
       }} />
 

@@ -15,12 +15,12 @@ const rawImages = {
   // HERO SECTION
   // -----------------------------------------------
   hero: {
-    // Premium chrome filter unit alone on stone surface — strongest product shot
-    productPrimary: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (13).jpeg',
-    // Cinematic woman under dark square rain shower (dark marble wall)
-    lifestylePrimary: '/images/WhatsApp Image 2026-11-01 at 5.02.31 PM (4).jpeg',
+    // Premium chrome filter unit — transparent background
+    productPrimary: '/images/showerfit-filter-transparent.png',
+    // Ultra-HD luxury rain shower background with crystal clear droplets
+    lifestylePrimary: '/images/hero-shower-hd.jpg',
     // Dark dramatic shower with warm light — secondary hero option
-    showerDramatic: '/images/WhatsApp Image 2026-11-01 at 5.02.31 PM (2).jpeg',
+    showerDramatic: '/images/hero-shower-hd.jpg',
   },
 
   // -----------------------------------------------
@@ -163,7 +163,7 @@ const rawImages = {
   // PURCHASE / CTA SECTION
   // -----------------------------------------------
   purchase: {
-    productMain: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (13).jpeg',
+    productMain: '/images/showerfit-filter-transparent.png',
   },
 
   // -----------------------------------------------
@@ -198,20 +198,18 @@ export const IMAGES = withBasePath(rawImages);
 export const PRODUCT = {
   name: 'ShowerFit 20-Stage Shower Filter',
   tagline: 'Bring advanced shower water filtration into your everyday self-care routine with ShowerFit’s 20-stage shower filter.',
-  // Pricing configuration — update with verified launch price
-  price: '₹2,499',
-  priceDisplay: '₹2,499',
-  priceNote: 'Introductory Launch Price',
-  isPriceConfigurablePlaceholder: true,
+  // Pricing configuration
+  originalPrice: '₹3,600',
+  price: '₹1,800',
+  priceDisplay: '₹1,800',
+  discountText: '50% OFF · Limited Offer',
+  priceNote: 'Special Offer Price',
   
-  // WhatsApp order destination — replace with active business number (e.g. 919876543210)
-  whatsappNumber: '919999999999',
-  
-  // Dynamic URL with proper URL encoding
-  get whatsappUrl() {
-    const msg = `Hi ShowerFit! I am interested in ordering the ${this.name} (${this.priceDisplay}). Please share ordering and delivery details.`;
-    return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(msg)}`;
-  },
+  // Official Contact Details
+  email: 'showerfitindia@gmail.com',
+  phone: '7022880271',
+  phoneDisplay: '+91 7022880271',
+  instagram: 'https://www.instagram.com/showerfit.co/',
 
   ctaContactUrl: '#contact',
   deliveryNote: 'Free delivery across India.',

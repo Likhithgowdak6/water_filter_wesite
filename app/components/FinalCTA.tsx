@@ -150,10 +150,8 @@ export default function FinalCTA() {
               <span style={{ fontSize: '1rem' }}>→</span>
             </a>
             <a
-              href="https://wa.me/919999999999?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20ShowerFit"
-              id="cta-whatsapp-btn"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:7022880271"
+              id="cta-contact-btn"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -181,7 +179,7 @@ export default function FinalCTA() {
                 el.style.color = 'rgba(255,255,255,0.85)';
               }}
             >
-              Ask Us Anything
+              Call +91 7022880271
             </a>
           </motion.div>
 

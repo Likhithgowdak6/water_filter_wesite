@@ -88,13 +88,11 @@ export default function FAQ() {
               Still have questions? We&apos;re just a message away.
             </p>
             <a
-              href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20a%20question%20about%20ShowerFit"
-              id="faq-whatsapp-btn"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:showerfitindia@gmail.com"
+              id="faq-contact-btn"
               className="btn-secondary"
             >
-              Chat on WhatsApp
+              Email: showerfitindia@gmail.com
             </a>
           </motion.div>
 
