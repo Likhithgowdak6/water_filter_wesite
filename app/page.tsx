@@ -4,7 +4,6 @@ import ProblemSection from './components/ProblemSection';
 import IntroFilter from './components/IntroFilter';
 import Benefits from './components/Benefits';
 import HowToInstall from './components/HowToInstall';
-import BrandHighlights from './components/BrandHighlights';
 import Purchase from './components/Purchase';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
@@ -19,7 +18,6 @@ export default function Home() {
       <IntroFilter />
       <Benefits />
       <HowToInstall />
-      <BrandHighlights />
       <Purchase />
       <FAQ />
       <FinalCTA />
