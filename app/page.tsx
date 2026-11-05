@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
 import IntroFilter from './components/IntroFilter';
 import Benefits from './components/Benefits';
-import ProductDetail from './components/ProductDetail';
 import HowToInstall from './components/HowToInstall';
 import BrandHighlights from './components/BrandHighlights';
 import Purchase from './components/Purchase';
@@ -19,7 +18,6 @@ export default function Home() {
       <ProblemSection />
       <IntroFilter />
       <Benefits />
-      <ProductDetail />
       <HowToInstall />
       <BrandHighlights />
       <Purchase />
