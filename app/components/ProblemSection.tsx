@@ -27,6 +27,27 @@ const problems = [
     headline: 'An itchy, irritated scalp you can\'t shake',
     body: 'Chlorinated water disrupts the scalp\'s delicate pH balance, triggering persistent itchiness, dandruff, and inflammation — even after you\'ve shampooed.',
   },
+  {
+    id: 'scale-buildup',
+    image: IMAGES.problems.waterScale,
+    alt: 'Hard water scale buildup on bathroom tap',
+    headline: 'Scale Buildup',
+    body: 'Hard mineral deposits chalk onto faucets and fixtures, restricting water flow and staining chrome fittings over time.',
+  },
+  {
+    id: 'mineral-deposits',
+    image: IMAGES.problems.showerGlassScale,
+    alt: 'Scale deposits on shower glass',
+    headline: 'Mineral Deposits',
+    body: 'Dissolved calcium and magnesium leave cloudy, etched film across shower screens and bathroom tiles that normal wiping can\'t clear.',
+  },
+  {
+    id: 'contaminated-water',
+    image: IMAGES.problems.pollutedWater,
+    alt: 'Contaminated tap water with rust and sediment',
+    headline: 'Contaminated Water',
+    body: 'Aging pipelines deliver municipal tap water tainted with chlorine, rust sediment, and microscopic impurities straight to your shower.',
+  },
 ];
 
 const containerVariants = {
@@ -176,99 +197,6 @@ export default function ProblemSection() {
 
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Water quality visual strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.9, delay: 0.7 }}
-          style={{
-            marginTop: '5rem',
-            display: 'flex',
-            gap: '2px',
-            overflow: 'hidden',
-          }}
-        >
-          {[
-            IMAGES.problems.waterScale,
-            IMAGES.problems.showerGlassScale,
-            IMAGES.problems.pollutedWater,
-          ].map((src, i) => (
-            <div
-              key={i}
-              style={{
-                flex: 1,
-                position: 'relative',
-                height: '180px',
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={src}
-                alt={['Hard water scale', 'Scale deposits on shower glass', 'Polluted shower water'][i]}
-                fill
-                quality={70}
-                style={{
-                  objectFit: 'cover',
-                  filter: 'grayscale(40%) brightness(0.6)',
-                }}
-              />
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'rgba(0,0,0,0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: '0.65rem',
-                  fontWeight: '600',
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.5)',
-                  textAlign: 'center',
-                  padding: '0 1rem',
-                }}>
-                  {['Scale Buildup', 'Mineral Deposits', 'Contaminated Water'][i]}
-                </span>
-              </div>
-            </div>
-          ))}
-
-          {/* Resolution callout */}
-          <div style={{
-            flex: '1.4',
-            padding: '2rem 2.5rem',
-            backgroundColor: 'var(--accent-sage-dark)',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.65rem',
-              fontWeight: '600',
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.6)',
-              display: 'block',
-              marginBottom: '0.75rem',
-            }}>
-              The ShowerFit Promise
-            </span>
-            <p style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: '1.5rem',
-              fontWeight: '400',
-              color: 'white',
-              lineHeight: 1.3,
-            }}>
-              One filter. Every shower. A lifetime of difference.
-            </p>
-          </div>
         </motion.div>
       </div>
 

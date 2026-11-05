@@ -137,8 +137,8 @@ const rawImages = {
     waterScale: '/images/WhatsApp Image 2026-11-01 at 5.02.34 PM (4).jpeg',
     // Water marks / hard water deposits on shower glass
     showerGlassScale: '/images/WhatsApp Image 2026-11-01 at 5.02.35 PM (5).jpeg',
-    // Shower head emitting black/polluted water (concept image)
-    pollutedWater: '/images/WhatsApp Image 2026-11-01 at 5.02.31 PM (1).jpeg',
+    // Contaminated / murky, rusty unfiltered tap water
+    pollutedWater: '/images/contaminated-water.jpg',
   },
 
   // -----------------------------------------------
