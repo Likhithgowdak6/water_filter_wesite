@@ -13,6 +13,7 @@ const steps = [
     image: IMAGES.installation.step2Hands,
     alt: 'Hands unscrewing shower head by hand',
     note: 'Simple hand twist — no plumbing alterations needed.',
+    bgColor: '#b7aba5',
   },
   {
     number: '02',
@@ -21,6 +22,7 @@ const steps = [
     image: IMAGES.installation.step2Diagram,
     alt: 'Installation diagram showing filter attaching to shower pipe and head',
     note: 'Compact inline design fits standard shower pipes.',
+    bgColor: '#373c43',
   },
   {
     number: '03',
@@ -29,6 +31,7 @@ const steps = [
     image: IMAGES.installation.step3Installed,
     alt: 'ShowerFit installed on shower arm with water flowing',
     note: 'Instant everyday shower filtration ready to use.',
+    bgColor: '#9f9c9a',
   },
 ];
 
@@ -151,8 +154,12 @@ export default function HowToInstall() {
                 style={{
                   position: 'relative',
                   overflow: 'hidden',
-                  minHeight: '380px',
+                  minHeight: '440px',
+                  backgroundColor: step.bgColor,
                   order: i % 2 === 0 ? 1 : 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
                 className="install-image"
               >
@@ -160,11 +167,12 @@ export default function HowToInstall() {
                   src={step.image}
                   alt={step.alt}
                   fill
-                  quality={85}
+                  quality={90}
                   style={{
-                    objectFit: 'cover',
+                    objectFit: 'contain',
                     objectPosition: 'center',
-                    transition: 'transform 0.9s ease',
+                    padding: '1.25rem',
+                    transition: 'transform 0.6s ease',
                   }}
                   className="install-photo"
                 />
@@ -222,7 +230,7 @@ export default function HowToInstall() {
           }
           .install-image {
             order: 0 !important;
-            min-height: 260px !important;
+            min-height: 320px !important;
           }
           .install-text {
             order: 1 !important;

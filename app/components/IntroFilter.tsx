@@ -89,7 +89,7 @@ export default function IntroFilter() {
           >
             <Image
               src={IMAGES.product.onStone}
-              alt="ShowerFit shower filter unit — premium chrome finish on stone surface"
+              alt="ShowerFit shower filter unit — premium chrome finish"
               fill
               quality={90}
               style={{

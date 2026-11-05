@@ -31,8 +31,8 @@ const rawImages = {
     withBox: '/images/WhatsApp Image 2026-11-01 at 5.02.31 PM.jpeg',
     // Standalone filter unit clean on grey bg (frontal)
     standalone: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM.jpeg',
-    // Chrome filter on stone surface — editorial hero quality
-    onStone: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (13).jpeg',
+    // Chrome filter unit — transparent background (isolated product)
+    onStone: '/images/showerfit-filter-transparent.png',
     // Chrome exterior only, compact (white bg)
     chromeExterior: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (12).jpeg',
     // Cut-away view showing internal filter layers
