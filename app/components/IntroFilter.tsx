@@ -73,7 +73,7 @@ export default function IntroFilter() {
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: '2px',
-            marginBottom: '2px',
+            paddingBottom: '8rem',
           }}
           className="intro-grid-top"
         >
@@ -209,137 +209,6 @@ export default function IntroFilter() {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* Bottom row: filter cartridge + lifestyle */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.9, delay: 0.5 }}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            gap: '2px',
-            paddingBottom: '8rem',
-          }}
-          className="intro-grid-bottom"
-        >
-          {/* Filter cartridge close-up */}
-          <div style={{
-            position: 'relative',
-            height: '340px',
-            overflow: 'hidden',
-            backgroundColor: 'var(--ivory-warm)',
-          }}>
-            <Image
-              src={IMAGES.filter.cartridgeDetailed}
-              alt="20-stage filter media layers — detailed cross-section"
-              fill
-              quality={85}
-              style={{
-                objectFit: 'contain',
-                objectPosition: 'center',
-                padding: '2rem',
-              }}
-            />
-            <div style={{
-              position: 'absolute',
-              bottom: '1.5rem',
-              left: '1.5rem',
-            }}>
-              <span className="label-overline" style={{ color: 'var(--text-muted)' }}>
-                Filter Media Layers
-              </span>
-            </div>
-          </div>
-
-          {/* Middle — key material callout */}
-          <div style={{
-            backgroundColor: 'var(--accent-sage)',
-            padding: '3rem 2.5rem',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-          }}>
-            <span className="label-overline" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              Filter Highlights
-            </span>
-            <div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '2rem 0' }}>
-                {['20-Stage Filtration Design', 'Replaceable Internal Cartridge', 'Modern Polished Chrome', 'Universal Inline Fit', 'Tool-Free Hand Setup', 'Balanced Water Flow'].map((item) => (
-                  <div
-                    key={item}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.75rem',
-                    }}
-                  >
-                    <span style={{
-                      width: '4px',
-                      height: '4px',
-                      borderRadius: '50%',
-                      backgroundColor: 'rgba(255,255,255,0.7)',
-                      flexShrink: 0,
-                    }} />
-                    <span style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '0.825rem',
-                      color: 'rgba(255,255,255,0.92)',
-                      fontWeight: '500',
-                    }}>
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: '1.2rem',
-              color: 'rgba(255,255,255,0.95)',
-              lineHeight: 1.3,
-            }}>
-              …and 13 more stages working in perfect sequence.
-            </p>
-          </div>
-
-          {/* Lifestyle — shower flowing with filter */}
-          <div style={{
-            position: 'relative',
-            height: '340px',
-            overflow: 'hidden',
-          }}>
-            <Image
-              src={IMAGES.installation.step3Dark}
-              alt="ShowerFit installed — water flowing through filtered shower head"
-              fill
-              quality={80}
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
-            />
-            <div style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 100%)',
-            }} />
-            <div style={{
-              position: 'absolute',
-              bottom: '1.5rem',
-              left: '1.5rem',
-            }}>
-              <p style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: '1.1rem',
-                color: 'white',
-                lineHeight: 1.3,
-              }}>
-                Crystal clear.<br />Every shower.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       <style jsx global>{`
@@ -348,9 +217,6 @@ export default function IntroFilter() {
         }
         @media (max-width: 900px) {
           .intro-grid-top {
-            grid-template-columns: 1fr !important;
-          }
-          .intro-grid-bottom {
             grid-template-columns: 1fr !important;
           }
         }
