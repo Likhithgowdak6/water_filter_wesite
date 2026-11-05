@@ -60,7 +60,7 @@ const rawImages = {
     // Hands attaching filter to shower head (real install photo)
     step2Hands: '/images/WhatsApp Image 2026-11-01 at 5.02.35 PM (8).jpeg',
     // Installation diagram with blue rotation arrows (filter on arm)
-    step2Diagram: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (3).jpeg',
+    step2Diagram: '/images/installation-diagram.jpg',
     // Filter installed on wall arm with shower head, water flowing
     step3Installed: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (14).jpeg',
     // Installed dark bg, water flowing through head — dramatic
