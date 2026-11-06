@@ -57,6 +57,8 @@ const rawImages = {
   // INSTALLATION PHOTOGRAPHS
   // -----------------------------------------------
   installation: {
+    // Stage 1: Hands unscrewing shower head from arm (white subway tile background)
+    step1Remove: '/images/install-step1-remove.jpg',
     // Hands attaching filter to shower head (real install photo)
     step2Hands: '/images/WhatsApp Image 2026-11-01 at 5.02.35 PM (8).jpeg',
     // Installation diagram with blue rotation arrows (filter on arm)

@@ -10,10 +10,10 @@ const steps = [
     number: '01',
     title: 'Remove Your Existing Shower Head',
     description: 'Unscrew your existing shower head by twisting it off the shower arm by hand. No tools needed for most setups.',
-    image: IMAGES.installation.step2Hands,
-    alt: 'Hands unscrewing shower head by hand',
+    image: IMAGES.installation.step1Remove,
+    alt: 'Hands unscrewing shower head from pipe arm against white subway tile',
     note: 'Simple hand twist — no plumbing alterations needed.',
-    bgColor: '#b7aba5',
+    bgColor: '#eae8e5',
   },
   {
     number: '02',
