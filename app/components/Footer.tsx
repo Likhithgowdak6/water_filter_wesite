@@ -68,14 +68,14 @@ export default function Footer() {
               <span style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '0.55rem',
-                letterSpacing: '0.22em',
+                letterSpacing: '0.14em',
                 fontWeight: '600',
                 textTransform: 'uppercase',
                 color: 'rgba(255,255,255,0.35)',
                 display: 'block',
                 marginTop: '2px',
               }}>
-                Shower Filtration
+                By Zenora Traders
               </span>
             </div>
             <p style={{
@@ -399,7 +399,7 @@ export default function Footer() {
             fontSize: '0.775rem',
             color: 'rgba(255,255,255,0.25)',
           }}>
-            © {CURRENT_YEAR} ShowerFit. All rights reserved.
+            © {CURRENT_YEAR} ShowerFit · By Zenora Traders. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: '2rem' }}>
             {['Privacy Policy', 'Terms of Use', 'Shipping Policy'].map((item) => (

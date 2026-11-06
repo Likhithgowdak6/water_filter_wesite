@@ -89,7 +89,7 @@ export default function Navbar() {
                 <span
                   style={{
                     fontSize: '0.55rem',
-                    letterSpacing: '0.22em',
+                    letterSpacing: '0.14em',
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: '600',
                     textTransform: 'uppercase',
@@ -97,7 +97,7 @@ export default function Navbar() {
                     transition: 'color 0.4s ease',
                   }}
                 >
-                  Shower Filtration
+                  By Zenora Traders
                 </span>
               </div>
             </a>
