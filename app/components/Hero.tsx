@@ -259,6 +259,7 @@ export default function Hero() {
                 backgroundColor: 'rgba(255,255,255,0.06)',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.12)',
+                overflow: 'hidden',
               }}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5 }}
@@ -268,10 +269,10 @@ export default function Hero() {
                 alt="ShowerFit 20-Stage Shower Filter — premium chrome finish"
                 fill
                 priority
-                quality={90}
+                quality={95}
                 style={{
-                  objectFit: 'contain',
-                  padding: '2.5rem',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
                 }}
               />
 

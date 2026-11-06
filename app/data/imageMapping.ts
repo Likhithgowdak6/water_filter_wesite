@@ -15,8 +15,8 @@ const rawImages = {
   // HERO SECTION
   // -----------------------------------------------
   hero: {
-    // Premium chrome filter unit — transparent background
-    productPrimary: '/images/showerfit-filter-transparent.png',
+    // Premium chrome filter unit with water droplets on dark reflective surface
+    productPrimary: '/images/hero-product-droplets.jpg',
     // Ultra-HD luxury rain shower background with crystal clear droplets
     lifestylePrimary: '/images/hero-shower-hd.jpg',
     // Dark dramatic shower with warm light — secondary hero option
