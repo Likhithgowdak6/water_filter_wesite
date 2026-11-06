@@ -155,8 +155,8 @@ const rawImages = {
     healthyScalp: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (5).jpeg',
     // Woman in bathrobe applying lotion, serene bathroom
     afterCare: '/images/WhatsApp Image 2026-11-01 at 5.02.34 PM (7).jpeg',
-    // Mother washing child — whole family benefit
-    familyCare: '/images/WhatsApp Image 2026-11-01 at 5.02.35 PM (3).jpeg',
+    // Comfortable bathing experience with warm shower streams
+    familyCare: '/images/comfortable-bathing.jpg',
     // Woman in marble shower, content and relaxed
     comfortableShower: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (9).jpeg',
   },

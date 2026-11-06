@@ -40,7 +40,7 @@ const benefits = [
     headline: 'A More Comfortable Bathing Experience for Everyone.',
     body: 'From quick morning routines to evening wind-downs, ShowerFit upgrades your daily shower into a more thoughtful, refreshing ritual for your entire home.',
     image: IMAGES.benefits.familyCare,
-    alt: 'Mother bathing child safely with filtered water',
+    alt: 'Woman experiencing a comfortable, refreshing shower with filtered water',
     bullets: [
       'Thoughtful everyday care for the entire household',
       'Helps keep shower space and glass cleaner over time',
