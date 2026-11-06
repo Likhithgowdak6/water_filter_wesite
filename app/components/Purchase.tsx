@@ -160,7 +160,7 @@ export default function Purchase() {
               </ul>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '2.5rem' }}>
               {/* Buy Now Button with Payment Gateway integration (commented out until credentials provided) */}
               <button
@@ -194,7 +194,7 @@ export default function Purchase() {
                    * rzp.open();
                    * ========================================================
                    */
-                  alert('Online payment gateway integration is configured and awaiting live gateway credentials. For immediate orders, please call +91 7022880271 or email showerfitindia@gmail.com.');
+                  alert('Online payment gateway integration is configured and awaiting live gateway credentials.');
                 }}
                 className="btn-primary"
                 style={{
@@ -213,31 +213,6 @@ export default function Purchase() {
                 Buy Now — ₹1,800
                 <span style={{ fontSize: '1.1rem' }}>→</span>
               </button>
-
-              {/* Direct Contact links */}
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '0.75rem',
-                marginTop: '0.35rem',
-              }}>
-                <a
-                  href={`tel:${PRODUCT.phone}`}
-                  id="purchase-call-btn"
-                  className="btn-secondary"
-                  style={{ textAlign: 'center', justifyContent: 'center', padding: '0.85rem 1rem', fontSize: '0.8rem' }}
-                >
-                  Call: {PRODUCT.phoneDisplay}
-                </a>
-                <a
-                  href={`mailto:${PRODUCT.email}`}
-                  id="purchase-email-btn"
-                  className="btn-secondary"
-                  style={{ textAlign: 'center', justifyContent: 'center', padding: '0.85rem 1rem', fontSize: '0.8rem' }}
-                >
-                  Email Us
-                </a>
-              </div>
             </div>
 
             {/* Trust signals */}
