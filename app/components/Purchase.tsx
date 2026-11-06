@@ -36,18 +36,19 @@ export default function Purchase() {
             {/* Main product image */}
             <div style={{
               position: 'relative',
-              backgroundColor: 'var(--ivory-warm)',
+              backgroundColor: '#F7F7F7',
               aspectRatio: '1 / 1.05',
               overflow: 'hidden',
+              borderRadius: '2px',
             }}>
               <Image
                 src={IMAGES.purchase.productMain}
-                alt="ShowerFit 20-Stage Shower Filter — premium chrome"
+                alt="ShowerFit 20-Stage Shower Filter complete kit with cutaway view and accessories"
                 fill
-                quality={90}
+                quality={95}
                 style={{
                   objectFit: 'contain',
-                  padding: '3rem',
+                  padding: '1.5rem',
                 }}
               />
             </div>

@@ -165,7 +165,8 @@ const rawImages = {
   // PURCHASE / CTA SECTION
   // -----------------------------------------------
   purchase: {
-    productMain: '/images/showerfit-filter-transparent.png',
+    // Cutaway view showing filter layers with box and installation accessories
+    productMain: '/images/purchase-box-cutaway.jpg',
   },
 
   // -----------------------------------------------
