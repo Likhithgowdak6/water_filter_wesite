@@ -6,7 +6,6 @@ import Benefits from './components/Benefits';
 import HowToInstall from './components/HowToInstall';
 import Purchase from './components/Purchase';
 import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <HowToInstall />
       <Purchase />
       <FAQ />
-      <FinalCTA />
       <Footer />
     </main>
   );
