@@ -126,11 +126,20 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="headline-hero" style={{ color: 'white', marginBottom: '1.5rem' }}>
-              Your Daily<br />
-              Shower.<br />
-              <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.85)' }}>A Better Kind</em><br />
-              of Clean.
+            <motion.h1
+              variants={fadeUp}
+              className="headline-hero"
+              style={{
+                color: 'white',
+                marginBottom: '1.5rem',
+                fontSize: 'clamp(2.5rem, 5.2vw, 4.5rem)',
+                lineHeight: 1.12,
+              }}
+            >
+              You&apos;re Filtering Your<br />
+              Drinking Water.<br />
+              <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.85)' }}>What About Your</em><br />
+              Shower Water?
             </motion.h1>
 
             <motion.p variants={fadeUp} className="body-lead" style={{

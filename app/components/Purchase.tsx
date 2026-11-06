@@ -37,7 +37,7 @@ export default function Purchase() {
             <div style={{
               position: 'relative',
               backgroundColor: 'var(--ivory-warm)',
-              aspectRatio: '1 / 1.1',
+              aspectRatio: '1 / 1.05',
               overflow: 'hidden',
             }}>
               <Image
@@ -50,46 +50,6 @@ export default function Purchase() {
                   padding: '3rem',
                 }}
               />
-            </div>
-
-            {/* Thumbnail strip */}
-            <div style={{
-              display: 'flex',
-              gap: '2px',
-              marginTop: '2px',
-            }}>
-              {[IMAGES.product.withBox, IMAGES.product.standalone, IMAGES.filter.cartridgeDetailed].map((src, i) => (
-                <div
-                  key={i}
-                  style={{
-                    position: 'relative',
-                    flex: 1,
-                    aspectRatio: '1',
-                    backgroundColor: 'var(--ivory-warm)',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                    border: i === 0 ? '1.5px solid var(--charcoal)' : '1.5px solid transparent',
-                    transition: 'border-color 0.3s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--stone-300)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = i === 0 ? 'var(--charcoal)' : 'transparent';
-                  }}
-                >
-                  <Image
-                    src={src}
-                    alt={`Product view ${i + 1}`}
-                    fill
-                    quality={70}
-                    style={{
-                      objectFit: 'contain',
-                      padding: '0.75rem',
-                    }}
-                  />
-                </div>
-              ))}
             </div>
           </motion.div>
 
