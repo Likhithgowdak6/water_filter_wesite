@@ -28,15 +28,15 @@ const rawImages = {
   // -----------------------------------------------
   product: {
     // Clean product photo on white bg with accessories box
-    withBox: '/images/WhatsApp Image 2026-11-01 at 5.02.31 PM.jpeg',
+    withBox: '/images/purchase-box-cutaway.jpg',
     // Standalone filter unit clean on grey bg (frontal)
-    standalone: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM.jpeg',
-    // Chrome filter unit — transparent background (isolated product)
-    onStone: '/images/showerfit-filter-transparent.png',
+    standalone: '/images/purchase-box-cutaway.jpg',
+    // 20-Stage Cutaway unit with box and accessories
+    onStone: '/images/purchase-box-cutaway.jpg',
     // Chrome exterior only, compact (white bg)
-    chromeExterior: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (12).jpeg',
+    chromeExterior: '/images/purchase-box-cutaway.jpg',
     // Cut-away view showing internal filter layers
-    cutaway: '/images/WhatsApp Image 2026-11-01 at 5.02.32 PM (10).jpeg',
+    cutaway: '/images/purchase-box-cutaway.jpg',
   },
 
   // -----------------------------------------------

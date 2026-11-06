@@ -84,18 +84,18 @@ export default function IntroFilter() {
               position: 'relative',
               height: '600px',
               overflow: 'hidden',
-              backgroundColor: 'var(--ivory-warm)',
+              backgroundColor: '#F7F7F7',
             }}
           >
             <Image
               src={IMAGES.product.onStone}
-              alt="ShowerFit shower filter unit — premium chrome finish"
+              alt="ShowerFit 20-Stage shower filter kit with cutaway layers and box"
               fill
-              quality={90}
+              quality={95}
               style={{
                 objectFit: 'contain',
                 objectPosition: 'center',
-                padding: '3rem',
+                padding: '2.5rem',
                 transition: 'transform 0.8s ease',
               }}
               className="intro-product-img"
@@ -115,7 +115,7 @@ export default function IntroFilter() {
                 textTransform: 'uppercase',
                 color: 'var(--text-muted)',
               }}>
-                The ShowerFit Unit
+                The ShowerFit 20-Stage Unit
               </span>
             </div>
           </motion.div>
