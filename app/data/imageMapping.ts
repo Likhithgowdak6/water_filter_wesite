@@ -214,6 +214,9 @@ export const PRODUCT = {
   phoneDisplay: '+91 7022880271',
   instagram: 'https://www.instagram.com/showerfit.co/',
 
+  // Payment Gateway
+  paymentUrl: 'https://payments.cashfree.com/links?code=Tb9p2kv8h7a0_AAAAAAAW6qU',
+
   ctaContactUrl: '#contact',
   deliveryNote: 'Free delivery across India.',
 };

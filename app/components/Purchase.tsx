@@ -161,42 +161,11 @@ export default function Purchase() {
               </ul>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button — Cashfree Payment Gateway */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '2.5rem' }}>
-              {/* Buy Now Button with Payment Gateway integration (commented out until credentials provided) */}
-              <button
-                type="button"
+              <a
+                href={PRODUCT.paymentUrl}
                 id="purchase-buy-now-btn"
-                onClick={() => {
-                  /* 
-                   * ========================================================
-                   * PAYMENT GATEWAY INTEGRATION (Razorpay / Cashfree / Stripe)
-                   * ========================================================
-                   * To activate direct checkout:
-                   * 1. Add your Gateway Key ID in your environment (.env.local)
-                   * 2. Initialize the checkout modal or redirect:
-                   *
-                   * const options = {
-                   *   key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-                   *   amount: 1800 * 100, // in paise = ₹1,800
-                   *   currency: 'INR',
-                   *   name: 'ShowerFit India',
-                   *   description: 'ShowerFit 20-Stage Shower Filter',
-                   *   handler: function (response: any) {
-                   *     window.location.href = `/order-success?payment_id=${response.razorpay_payment_id}`;
-                   *   },
-                   *   prefill: {
-                   *     email: 'showerfitindia@gmail.com',
-                   *     contact: '7022880271'
-                   *   },
-                   *   theme: { color: '#1B382B' }
-                   * };
-                   * const rzp = new (window as any).Razorpay(options);
-                   * rzp.open();
-                   * ========================================================
-                   */
-                  alert('Online payment gateway integration is configured and awaiting live gateway credentials.');
-                }}
                 className="btn-primary"
                 style={{
                   width: '100%',
@@ -209,11 +178,12 @@ export default function Purchase() {
                   letterSpacing: '0.08em',
                   cursor: 'pointer',
                   border: 'none',
+                  textDecoration: 'none',
                 }}
               >
                 Buy Now — ₹1,800
                 <span style={{ fontSize: '1.1rem' }}>→</span>
-              </button>
+              </a>
             </div>
 
             {/* Trust signals */}
