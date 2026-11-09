@@ -6,8 +6,8 @@
 // categorized by visual content. Paths reference
 // the /public/images/ directory.
 
-// Base path for GitHub Pages subfolder deployment
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/water_filter_wesite' : '';
+// Base path (empty for custom domain showerfit.in)
+const BASE_PATH = '';
 
 const rawImages = {
 
